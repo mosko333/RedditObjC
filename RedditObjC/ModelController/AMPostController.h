@@ -12,6 +12,6 @@
 @interface AMPostController : NSObject
 
 + (void) fetchPostForSeachTerm: (NSString *)searchTerm
-                    completion: (void (^)(NSArray<AMPost *> * _Nullable))competion;
+                    completion: (void (^)(NSArray<AMPost *> * _Nullable))completion;
 
 @end

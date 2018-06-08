@@ -18,9 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    [AMPostController fetchPostForSeachTerm:@"funny" completion:^(NSArray<AMPost *> * _Nullable post) {
-//        NSLog(@"test");
-//    }];
+    [AMPostController fetchPostForSeachTerm:@"funny" completion:^(NSArray<AMPost *> * _Nullable post) {
+        NSLog(@"test");
+    }];
     
     return YES;
 }
