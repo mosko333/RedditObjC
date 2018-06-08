@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AMPostController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+//    [AMPostController fetchPostForSeachTerm:@"funny" completion:^(NSArray<AMPost *> * _Nullable post) {
+//        NSLog(@"test");
+//    }];
+    
     return YES;
 }
 

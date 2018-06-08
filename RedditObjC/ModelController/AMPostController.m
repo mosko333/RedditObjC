@@ -7,7 +7,21 @@
 //
 
 #import "AMPostController.h"
+#import "AMPost.h"
+// https://www.reddit.com/r/funny.json
 
 @implementation AMPostController
+
+static NSString * const baseURLString = @"https://www.reddit.com/r/";
+
++ (void) fetchPostForSeachTerm: (NSString *)searchTerm completion: (void (^)(NSArray<AMPost *> * _Nullable))competion
+{
+    // URL
+    NSURL *url = [[NSURL alloc] initWithString:baseURLString];
+    url = [url URLByAppendingPathComponent:[searchTerm lowercaseString]];
+    url = [url URLByAppendingPathExtension:@"json"];
+    NSLog(@"🥞%@🥞", url);
+    
+}
 
 @end

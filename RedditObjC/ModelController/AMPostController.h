@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@class AMPost;
 
 @interface AMPostController : NSObject
+
++ (void) fetchPostForSeachTerm: (NSString *)searchTerm
+                    completion: (void (^)(NSArray<AMPost *> * _Nullable))competion;
 
 @end
