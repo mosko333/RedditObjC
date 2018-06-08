@@ -32,11 +32,10 @@ class PostListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as? PostTableViewCell else { return UITableViewCell() }
         let post = posts[indexPath.row]
-        cell.titleLabel.text = post.title
-        cell.likeCountLable.text = "Number of Like: \(post.likeCount)"
-        cell.commentCountLable.text = "Number of Comments \(post.commentCount)"
+        cell.post = post
         return cell
     }
+    
 }
 
 // MARK: - UISearchBarDelegate Functions

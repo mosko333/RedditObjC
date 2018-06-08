@@ -8,7 +8,6 @@
 
 #import "AMPostController.h"
 #import "AMPost.h"
-// https://www.reddit.com/r/funny.json
 
 @implementation AMPostController
 
@@ -39,9 +38,7 @@ static NSString * const baseURLString = @"https://www.reddit.com/r/";
         NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
         NSDictionary *dataDictionary = jsonDictionary[@"data"];
         NSDictionary *postDictionarys = dataDictionary[@"children"];
-        
         NSMutableArray *posts = [[NSMutableArray alloc] init];
-        
         for (NSDictionary *postDictionary in postDictionarys) {
             AMPost *post = [[AMPost alloc] initWithDictionary:postDictionary[@"data"]];
             [posts addObject:post];
@@ -49,5 +46,4 @@ static NSString * const baseURLString = @"https://www.reddit.com/r/";
         completion(posts);
     }]resume];
 }
-
 @end

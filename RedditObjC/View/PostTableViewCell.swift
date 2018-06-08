@@ -10,6 +10,12 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    var post: AMPost? {
+        didSet {
+            updateViews()
+        }
+    }
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var likeCountLable: UILabel!
     @IBOutlet weak var commentCountLable: UILabel!
@@ -21,5 +27,11 @@ class PostTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
+    
+    func updateViews() {
+        guard let post = post else { return }
+        titleLabel.text = post.title
+        likeCountLable.text = "Number of Like: \(post.likeCount)"
+        commentCountLable.text = "Number of Comments \(post.commentCount)"
+    }
 }
