@@ -38,7 +38,15 @@ static NSString * const baseURLString = @"https://www.reddit.com/r/";
         // Top Level Data
         NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
         NSDictionary *dataDictionary = jsonDictionary[@"data"];
-
+        NSDictionary *postDictionarys = dataDictionary[@"children"];
+        
+        NSMutableArray *posts = [[NSMutableArray alloc] init];
+        
+        for (NSDictionary *postDictionary in postDictionarys) {
+            AMPost *post = [[AMPost alloc] initWithDictionary:postDictionary[@"data"]];
+            [posts addObject:post];
+        }
+        completion(posts);
     }]resume];
 }
 
