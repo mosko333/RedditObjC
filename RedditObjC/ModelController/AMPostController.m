@@ -18,7 +18,7 @@ static NSString * const baseURLString = @"https://www.reddit.com/r/";
 {
     // URL
     NSURL *url = [[NSURL alloc] initWithString:baseURLString];
-    url = [url URLByAppendingPathComponent:[searchTerm lowercaseString]];
+    url = [url URLByAppendingPathComponent:[[searchTerm stringByReplacingOccurrencesOfString:@" " withString:@"+"]lowercaseString]];
     url = [url URLByAppendingPathExtension:@"json"];
     NSLog(@"🥞%@🥞", url);
     

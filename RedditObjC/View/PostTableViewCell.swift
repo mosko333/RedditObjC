@@ -10,6 +10,10 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var likeCountLable: UILabel!
+    @IBOutlet weak var commentCountLable: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

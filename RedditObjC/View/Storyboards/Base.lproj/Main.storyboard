@@ -62,6 +62,11 @@
                                         <constraint firstItem="p7B-7j-iRs" firstAttribute="top" secondItem="N6W-cZ-0fq" secondAttribute="topMargin" constant="8" id="oBF-ga-QGQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentCountLable" destination="zL4-Ew-TMI" id="r5u-up-BTk"/>
+                                    <outlet property="likeCountLable" destination="VoN-OO-Y0E" id="zBl-vX-dG8"/>
+                                    <outlet property="titleLabel" destination="pXW-Ey-h5y" id="3Dr-qS-yrh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
