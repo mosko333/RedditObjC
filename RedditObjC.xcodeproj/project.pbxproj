@@ -12,6 +12,10 @@
 		7E60B74120CAD44A00C8F703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E60B74020CAD44A00C8F703 /* Assets.xcassets */; };
 		7E60B74420CAD44A00C8F703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E60B74220CAD44A00C8F703 /* LaunchScreen.storyboard */; };
 		7E60B74720CAD44A00C8F703 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E60B74620CAD44A00C8F703 /* main.m */; };
+		7E60B75520CAD7EF00C8F703 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60B75420CAD7EF00C8F703 /* PostTableViewCell.swift */; };
+		7E60B75720CAD81400C8F703 /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60B75620CAD81400C8F703 /* PostListTableViewController.swift */; };
+		7E60B75A20CAD85E00C8F703 /* AMPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E60B75920CAD85E00C8F703 /* AMPost.m */; };
+		7E60B75D20CAD87000C8F703 /* AMPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E60B75C20CAD87000C8F703 /* AMPostController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,13 @@
 		7E60B74320CAD44A00C8F703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E60B74520CAD44A00C8F703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E60B74620CAD44A00C8F703 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7E60B75320CAD7EE00C8F703 /* RedditObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RedditObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		7E60B75420CAD7EF00C8F703 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		7E60B75620CAD81400C8F703 /* PostListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
+		7E60B75820CAD85E00C8F703 /* AMPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMPost.h; sourceTree = "<group>"; };
+		7E60B75920CAD85E00C8F703 /* AMPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMPost.m; sourceTree = "<group>"; };
+		7E60B75B20CAD87000C8F703 /* AMPostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMPostController.h; sourceTree = "<group>"; };
+		7E60B75C20CAD87000C8F703 /* AMPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMPostController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +66,12 @@
 		7E60B73620CAD44900C8F703 /* RedditObjC */ = {
 			isa = PBXGroup;
 			children = (
+				7E60B73720CAD44900C8F703 /* AppDelegate.h */,
+				7E60B73820CAD44900C8F703 /* AppDelegate.m */,
 				7E60B75220CAD61200C8F703 /* View */,
 				7E60B75120CAD5F800C8F703 /* ViewController */,
 				7E60B75020CAD5ED00C8F703 /* ModelController */,
 				7E60B74F20CAD5E300C8F703 /* Model */,
-				7E60B73720CAD44900C8F703 /* AppDelegate.h */,
-				7E60B73820CAD44900C8F703 /* AppDelegate.m */,
 				7E60B74D20CAD5B500C8F703 /* Resources */,
 			);
 			path = RedditObjC;
@@ -72,6 +83,7 @@
 				7E60B74020CAD44A00C8F703 /* Assets.xcassets */,
 				7E60B74520CAD44A00C8F703 /* Info.plist */,
 				7E60B74620CAD44A00C8F703 /* main.m */,
+				7E60B75320CAD7EE00C8F703 /* RedditObjC-Bridging-Header.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -88,6 +100,8 @@
 		7E60B74F20CAD5E300C8F703 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7E60B75820CAD85E00C8F703 /* AMPost.h */,
+				7E60B75920CAD85E00C8F703 /* AMPost.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,6 +109,8 @@
 		7E60B75020CAD5ED00C8F703 /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
+				7E60B75B20CAD87000C8F703 /* AMPostController.h */,
+				7E60B75C20CAD87000C8F703 /* AMPostController.m */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -102,6 +118,7 @@
 		7E60B75120CAD5F800C8F703 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7E60B75620CAD81400C8F703 /* PostListTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -110,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				7E60B74E20CAD5C300C8F703 /* Storyboards */,
+				7E60B75420CAD7EF00C8F703 /* PostTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +164,7 @@
 				TargetAttributes = {
 					7E60B73320CAD44900C8F703 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -186,7 +205,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E60B74720CAD44A00C8F703 /* main.m in Sources */,
+				7E60B75D20CAD87000C8F703 /* AMPostController.m in Sources */,
 				7E60B73920CAD44900C8F703 /* AppDelegate.m in Sources */,
+				7E60B75520CAD7EF00C8F703 /* PostTableViewCell.swift in Sources */,
+				7E60B75720CAD81400C8F703 /* PostListTableViewController.swift in Sources */,
+				7E60B75A20CAD85E00C8F703 /* AMPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DBM67E5D74;
 				INFOPLIST_FILE = "$(SRCROOT)/RedditObjC/Resources/Info.plist";
@@ -335,6 +359,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adammoskovich.RedditObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedditObjC/Resources/RedditObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -343,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DBM67E5D74;
 				INFOPLIST_FILE = "$(SRCROOT)/RedditObjC/Resources/Info.plist";
@@ -352,6 +380,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adammoskovich.RedditObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedditObjC/Resources/RedditObjC-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
