@@ -21,6 +21,7 @@ class PostListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        setUPUI()
     }
     
     // MARK: - Table view data source
@@ -35,7 +36,12 @@ class PostListTableViewController: UITableViewController {
         cell.post = post
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let clearColor = UIColor.clear
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.2)
+        cell.textLabel?.backgroundColor = clearColor
+        cell.detailTextLabel?.backgroundColor = clearColor
+    }
 }
 
 // MARK: - UISearchBarDelegate Functions
@@ -57,3 +63,22 @@ extension PostListTableViewController: UISearchBarDelegate {
         }
     }
 }
+extension PostListTableViewController{
+    
+    // MARK: - UI
+    
+    func setUPUI() {
+        
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "background"))
+        tableView.backgroundView = imageView
+        imageView.contentMode = .scaleAspectFill
+        
+        // Make a blur effect
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.frame = imageView.bounds
+        imageView.addSubview(blurView)
+        imageView.clipsToBounds = true
+    }
+}
+
