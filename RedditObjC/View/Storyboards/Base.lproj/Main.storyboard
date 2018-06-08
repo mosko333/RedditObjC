@@ -69,6 +69,9 @@
                             <outlet property="delegate" destination="yJf-Sp-yA1" id="mPp-Ph-k0N"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="L96-VL-7TH" id="kjO-XH-dmL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1a5-pM-GAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
